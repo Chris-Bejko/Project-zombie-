@@ -6,6 +6,11 @@ using UnityEngine;
 public class PlayerStateMachine : StateMachine
 {
     public float horizontal, vertical;
+    public Animator animator;
+    public Rigidbody2D rb;
+    public float groundCheckRadius, moveSpeed, jumpForce;
+    public Transform groundCheck;
+    public LayerMask groundLayer;
     public new void Awake()
     {
         InitializeStates();
@@ -14,9 +19,12 @@ public class PlayerStateMachine : StateMachine
     public override void InitializeStates()
     {
         base.InitializeStates();
-        states = GetComponents<State>().ToList();
+        states = GetComponents<PlayerState>().ToList();
         foreach (var e in states)
             e.Init(this);
+
+        currentState = PlayerStateID.Moving;
+        ChangeState(PlayerStateID.Idle);
     }
 
 
@@ -25,5 +33,10 @@ public class PlayerStateMachine : StateMachine
         base.Update();
 
         horizontal = Input.GetAxisRaw("Horizontal");
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(groundCheck.position, groundCheckRadius);
     }
 }

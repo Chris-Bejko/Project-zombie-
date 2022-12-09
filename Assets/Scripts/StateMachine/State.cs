@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public  class State : MonoBehaviour
+public class PlayerState : MonoBehaviour
 {
-    public StateID stateID;
-    public PlayerStateMachine Machine;
+    public PlayerStateID stateID;
+    public PlayerStateMachine Player;
 
     public virtual void Init(PlayerStateMachine stateMachine)
     {
-        Machine = stateMachine;
+        Player = stateMachine;
     }
 
     public virtual void Tick()
@@ -28,22 +28,23 @@ public  class State : MonoBehaviour
 
     public virtual void OnEnterState()
     {
-
+        Debug.LogError("Entered state : " + stateID);
     }
 
     public virtual void OnExitState()
     {
-
+        Debug.LogError("Exited state: " + stateID);
     }
 }
 
 
-public enum StateID
+public enum PlayerStateID
 {
     None,
     Idle,
     Moving,
     Jumping,
     Shooting,
-    Grounded
+    Grounded,
+    OnAir,
 }

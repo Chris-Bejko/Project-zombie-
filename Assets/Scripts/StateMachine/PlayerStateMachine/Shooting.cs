@@ -1,8 +1,18 @@
-﻿internal class Shooting : State
+﻿using UnityEngine;
+
+public class Shooting : Grounded
 {
     public override void Init(PlayerStateMachine stateMachine)
     {
-        this.Machine = stateMachine;
-        stateID = StateID.Shooting;
+        this.Player = stateMachine;
+        stateID = PlayerStateID.Shooting;
+    }
+
+    public override void CheckConditions()
+    {
+        base.CheckConditions();
+
+        if (Input.GetMouseButtonUp(0))
+            Player.ChangeState(Player.GetPreviousState());
     }
 }

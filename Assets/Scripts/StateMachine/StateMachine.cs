@@ -5,12 +5,13 @@ using UnityEngine;
 
 public abstract class StateMachine : MonoBehaviour
 {
-    public StateID currentState;
+    [SerializeField]
+    protected PlayerStateID currentState;
+    [SerializeField]
+    protected PlayerStateID previousState;
 
-    public StateID previousState;
-
-    public List<State> states;
-    public static event Action<StateID> OnStateChange;
+    protected List<PlayerState> states;
+    public static event Action<PlayerStateID> OnStateChange;
 
     public virtual void Awake()
     {
@@ -24,24 +25,25 @@ public abstract class StateMachine : MonoBehaviour
 
     public virtual void Update()
     {
-        GetState(currentState).Tick();
-        GetState(currentState).CheckConditions();
+        GetState(currentState)?.Tick();
+        GetState(currentState)?.CheckConditions();
     }
 
     public void FixedUpdate()
     {
-        GetState(currentState).PhysicsTick();
+        GetState(currentState)?.PhysicsTick();
     }
 
-    public void ChangeState(StateID newState)
+    public void ChangeState(PlayerStateID newState)
     {
 
-        if (previousState != StateID.None && GetState(previousState) != null)
+        if (previousState != PlayerStateID.None && GetState(previousState) != null)
             GetState(previousState).OnExitState();
 
-        previousState = currentState;
+        if(currentState != previousState)
+            previousState = currentState;
 
-        if (newState != StateID.None && GetState(newState) != null)
+        if (newState != PlayerStateID.None && GetState(newState) != null)
             GetState(newState).OnEnterState();
 
         currentState = newState;
@@ -50,7 +52,7 @@ public abstract class StateMachine : MonoBehaviour
     }
 
 
-    private State GetState(StateID stateID)
+    private PlayerState GetState(PlayerStateID stateID)
     {
         foreach (var state in states)
         {
@@ -59,5 +61,15 @@ public abstract class StateMachine : MonoBehaviour
         }
 
         return null;
+    }
+
+    public PlayerStateID GetCurrentState()
+    {
+        return currentState;
+    }
+
+    public PlayerStateID GetPreviousState()
+    {
+        return previousState;
     }
 }
