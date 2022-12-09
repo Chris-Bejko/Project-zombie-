@@ -28,12 +28,10 @@ public class PlayerState : MonoBehaviour
 
     public virtual void OnEnterState()
     {
-        Debug.LogError("Entered state : " + stateID);
     }
 
     public virtual void OnExitState()
     {
-        Debug.LogError("Exited state: " + stateID);
     }
 }
 
@@ -47,4 +45,5 @@ public enum PlayerStateID
     Shooting,
     Grounded,
     OnAir,
+    Dead
 }

@@ -2,6 +2,8 @@
 
 public class Moving : PlayerState
 {
+
+
     public override void Init(PlayerStateMachine stateMachine)
     {
         this.Player = stateMachine;
@@ -11,7 +13,7 @@ public class Moving : PlayerState
     public override void CheckConditions()
     {
         base.CheckConditions();
-        if (Player.horizontal == 0 && Player.vertical == 0)
+        if (Player.horizontal == 0)
             Player.ChangeState(PlayerStateID.Grounded);
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -22,7 +24,7 @@ public class Moving : PlayerState
     public override void Tick()
     {
         base.Tick();
-        transform.localScale = new Vector3(Mathf.Sign(Player.horizontal), 1, 1);
+        Player.lastDirection = Player.horizontal;
     }
 
     public override void PhysicsTick()
@@ -30,4 +32,6 @@ public class Moving : PlayerState
         base.PhysicsTick();
         Player.rb.velocity = new Vector2(Player.horizontal * Player.moveSpeed, Player.rb.velocity.y);
     }
+
+
 }

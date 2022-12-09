@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Idle : Grounded
+public class Dead : PlayerState
 {
     public override void Init(PlayerStateMachine machine)
     {
         this.Player = machine;
-        stateID = PlayerStateID.Idle;
+        stateID = PlayerStateID.Dead;
     }
 
 
@@ -21,18 +21,16 @@ public class Idle : Grounded
     public override void CheckConditions()
     {
         base.CheckConditions();
-
     }
 
     public override void OnEnterState()
     {
         base.OnEnterState();
-        Debug.LogError("Entered Idle State");
+        Player.animator.SetTrigger("Die");
     }
 
     public override void OnExitState()
     {
         base.OnExitState();
-        Debug.LogError("Exited Idle State");
     }
 }

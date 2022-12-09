@@ -24,6 +24,7 @@ public class Jumping : PlayerState
     public override void OnEnterState()
     {
         base.OnEnterState();
+        Player.animator.SetTrigger("Jump");
         Player.rb.velocity = new Vector2(Player.rb.velocity.x, Player.jumpForce);
     }
 }

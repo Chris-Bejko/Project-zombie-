@@ -20,7 +20,7 @@ public class Grounded : Moving
         if (Input.GetMouseButton(0))
             Player.ChangeState(PlayerStateID.Shooting);
 
-        if (Player.horizontal != 0 || Player.vertical != 0)
+        if (Player.horizontal != 0)
         {
             Player.ChangeState(PlayerStateID.Moving);
         }
