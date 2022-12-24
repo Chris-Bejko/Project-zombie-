@@ -13,17 +13,13 @@ public class Grounded : Moving
         base.CheckConditions();
 
         if (Input.GetKeyDown(KeyCode.Space))
-        {
             Player.ChangeState(PlayerStateID.Jumping);
-            Debug.LogError("Space Pressed, should jump");
-        }
+
         if (Input.GetMouseButton(0))
             Player.ChangeState(PlayerStateID.Shooting);
 
         if (Player.horizontal != 0)
-        {
             Player.ChangeState(PlayerStateID.Moving);
-        }
 
         if (!Physics2D.OverlapCircle(Player.groundCheck.position, Player.groundCheckRadius, Player.groundLayer))
             Player.ChangeState(PlayerStateID.OnAir);

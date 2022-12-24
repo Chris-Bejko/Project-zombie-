@@ -29,6 +29,6 @@ public class ObjectPool : MonoBehaviour
             if (!e.activeInHierarchy)
                 return e;
 
-        return null;   
+        return Instantiate(objectToPool, transform);   
     }
 }
