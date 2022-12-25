@@ -9,5 +9,4 @@ public interface IDamageable
 
     public int GetHealth();
 
-    public void Die();
 }

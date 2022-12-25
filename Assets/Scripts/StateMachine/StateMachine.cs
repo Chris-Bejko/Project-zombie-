@@ -26,8 +26,8 @@ public  class StateMachine : MonoBehaviour
         foreach (var e in states)
             e.Init(this);
 
-        currentState = StateID.Moving;
-        ChangeState(StateID.Grounded);
+        //currentState = StateID.Moving;
+        //ChangeState(StateID.Grounded);
     }
 
     public void Update()

@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     public float horizontal, vertical;
 
+    private int currentPlatform;
+
     public Animator animator;
 
     public Rigidbody2D rb;
@@ -40,5 +42,15 @@ public class Player : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawSphere(groundCheck.position, groundCheckRadius);
+    }
+
+    public void ChangePlatform(int newPlatform)
+    {
+        currentPlatform = newPlatform;
+    }
+
+    public int GetPlatform()
+    {
+        return currentPlatform;
     }
 }

@@ -43,5 +43,7 @@ public enum StateID
     Shooting,
     Grounded,
     OnAir,
-    Dead
+    Dead,
+    Chase,
+    Combat
 }

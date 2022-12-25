@@ -140,7 +140,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: gholum_run_start_strip4_0
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 6
+        width: 28
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3063ebf842a218a4a847bf816c103a2f
+      internalID: 1619347087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_run_start_strip4_1
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 6
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 667af46c529f7bd4e87a461382b56f07
+      internalID: -914260699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_run_start_strip4_2
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 6
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5acb77bbcaff947a4705e60d430390
+      internalID: 1175960481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_run_start_strip4_3
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 6
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d62ceeaf7bed6498aecc6ea81ae7bd
+      internalID: -401647320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -151,7 +235,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gholum_run_start_strip4_1: -914260699
+      gholum_run_start_strip4_0: 1619347087
+      gholum_run_start_strip4_2: 1175960481
+      gholum_run_start_strip4_3: -401647320
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
