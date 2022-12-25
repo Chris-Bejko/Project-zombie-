@@ -1,19 +1,21 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class Jumping : PlayerState
+public class Jumping : State
 {
-    public override void Init(PlayerStateMachine stateMachine)
+    public Player player;
+    public override void Init(StateMachine stateMachine)
     {
-        this.Player = stateMachine;
-        stateID = PlayerStateID.Jumping;
+        this.stateMachine = stateMachine;
+        stateID = StateID.Jumping;
+        
     }
 
     public override void CheckConditions()
     {
         base.CheckConditions();
-        if (!Physics2D.OverlapCircle(Player.groundCheck.position, Player.groundCheckRadius, Player.groundLayer))
-            Player.ChangeState(PlayerStateID.OnAir);
+        if (!Physics2D.OverlapCircle(player.groundCheck.position, player.groundCheckRadius, player.groundLayer))
+            stateMachine.ChangeState(StateID.OnAir);
     }
 
     public override void PhysicsTick()
@@ -24,7 +26,7 @@ public class Jumping : PlayerState
     public override void OnEnterState()
     {
         base.OnEnterState();
-        Player.animator.SetTrigger("Jump");
-        Player.rb.velocity = new Vector2(Player.rb.velocity.x, Player.jumpForce);
+        player.animator.SetTrigger("Jump");
+        player.rb.velocity = new Vector2(player.rb.velocity.x, player.jumpForce);
     }
 }

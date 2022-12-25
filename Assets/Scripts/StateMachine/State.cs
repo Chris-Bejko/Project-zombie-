@@ -2,19 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerState : MonoBehaviour
+public class State : MonoBehaviour
 {
-    public PlayerStateID stateID;
-    public PlayerStateMachine Player;
+    public StateID stateID;
+    public StateMachine stateMachine;
 
-    public virtual void Init(PlayerStateMachine stateMachine)
+    public virtual void Init(StateMachine stateMachine)
     {
-        Player = stateMachine;
     }
 
     public virtual void Tick()
     {
-
     }
 
     public virtual void PhysicsTick()
@@ -36,7 +34,7 @@ public class PlayerState : MonoBehaviour
 }
 
 
-public enum PlayerStateID
+public enum StateID
 {
     None,
     Idle,

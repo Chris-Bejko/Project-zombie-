@@ -1,36 +1,35 @@
 ﻿using UnityEngine;
 
-public class Moving : PlayerState
+public class Moving : State
 {
-
-
-    public override void Init(PlayerStateMachine stateMachine)
+    public Player player;
+    public override void Init(StateMachine stateMachine)
     {
-        this.Player = stateMachine;
-        stateID = PlayerStateID.Moving;
+        this.stateMachine = stateMachine;
+        stateID = StateID.Moving;
     }
 
     public override void CheckConditions()
     {
         base.CheckConditions();
-        if (Player.horizontal == 0)
-            Player.ChangeState(PlayerStateID.Grounded);
+        if (player.horizontal == 0)
+            stateMachine.ChangeState(StateID.Grounded);
 
         if (Input.GetKeyDown(KeyCode.Space))
-            Player.ChangeState(PlayerStateID.Jumping);
+            stateMachine.ChangeState(StateID.Jumping);
 
     }
 
     public override void Tick()
     {
         base.Tick();
-        Player.lastDirection = Player.horizontal;
+        player.lastDirection = player.horizontal;
     }
 
     public override void PhysicsTick()
     {
         base.PhysicsTick();
-        Player.rb.velocity = new Vector2(Player.horizontal * Player.moveSpeed, Player.rb.velocity.y);
+        player.rb.velocity = new Vector2(player.horizontal * player.moveSpeed, player.rb.velocity.y);
     }
 
 

@@ -1,19 +1,21 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class OnAir : PlayerState
+public class OnAir : State
 {
-    public override void Init(PlayerStateMachine stateMachine)
+    public Player player;
+    public override void Init(StateMachine stateMachine)
     {
-        this.Player = stateMachine;
-        stateID = PlayerStateID.OnAir;
+        this.stateMachine= stateMachine;
+        stateID = StateID.OnAir;
+        
     }
 
     public override void CheckConditions()
     {
         base.CheckConditions();
-        if (Physics2D.OverlapCircle(Player.groundCheck.position, Player.groundCheckRadius, Player.groundLayer))
-            Player.ChangeState(PlayerStateID.Grounded);
+        if (Physics2D.OverlapCircle(player.groundCheck.position, player.groundCheckRadius, player.groundLayer))
+            stateMachine.ChangeState(StateID.Grounded);
 
     }
 
@@ -21,7 +23,7 @@ public class OnAir : PlayerState
     {
         base.PhysicsTick();
        
-        Player.rb.velocity = new Vector2(Player.horizontal * Player.moveSpeed, Player.rb.velocity.y);
+        player.rb.velocity = new Vector2(player.horizontal * player.moveSpeed, player.rb.velocity.y);
 
     }
     public override void OnEnterState()

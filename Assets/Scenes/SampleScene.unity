@@ -393,7 +393,8 @@ GameObject:
   - component: {fileID: 1098752155}
   - component: {fileID: 1098752154}
   - component: {fileID: 1098752156}
-  - component: {fileID: 1098752159}
+  - component: {fileID: 1098752167}
+  - component: {fileID: 1098752166}
   - component: {fileID: 1098752158}
   - component: {fileID: 1098752157}
   - component: {fileID: 1098752160}
@@ -511,8 +512,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c54b4b53287d3af409f9ee43d9fc6528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateID: 0
-  Player: {fileID: 0}
+  stateID: 3
+  stateMachine: {fileID: 0}
+  player: {fileID: 1098752166}
 --- !u!114 &1098752158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -525,36 +527,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d8066b992f53246be6c9e3c53091aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateID: 0
-  Player: {fileID: 0}
---- !u!114 &1098752159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098752153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38c9ad0fa8275ee479fee2c6aefcc9d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentState: 0
-  previousState: 0
-  horizontal: 0
-  vertical: 0
-  animator: {fileID: 1098752156}
-  rb: {fileID: 1098752163}
-  groundCheckRadius: 0.5
-  moveSpeed: 10
-  jumpForce: 15
-  groundCheck: {fileID: 350642335}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  lastDirection: 0
-  firePoint: {fileID: 1333745142}
-  fireRate: 0.2
+  stateID: 2
+  stateMachine: {fileID: 0}
+  player: {fileID: 1098752166}
 --- !u!114 &1098752160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,8 +542,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47d1cc284610cb04a96b0bcd4673a93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateID: 0
-  Player: {fileID: 0}
+  stateID: 5
+  stateMachine: {fileID: 0}
+  player: {fileID: 1098752166}
 --- !u!114 &1098752161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,8 +557,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 209faf78a293a2a4bb8fecc3f6426d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateID: 0
-  Player: {fileID: 0}
+  stateID: 7
+  stateMachine: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &1098752162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -595,8 +572,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3d4e6b6119414438286b0e6ce3fac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateID: 0
-  Player: {fileID: 0}
+  stateID: 4
+  stateMachine: {fileID: 0}
+  player: {fileID: 1098752166}
 --- !u!50 &1098752163
 Rigidbody2D:
   serializedVersion: 4
@@ -646,8 +624,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ae40bbeaffe5748b75d0addb9997c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateID: 0
-  Player: {fileID: 0}
+  stateID: 6
+  stateMachine: {fileID: 0}
+  player: {fileID: 1098752166}
+--- !u!114 &1098752166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098752153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d24dd1fdc6c36654fa6fa86f2f277cb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontal: 0
+  vertical: 0
+  animator: {fileID: 1098752156}
+  rb: {fileID: 1098752163}
+  groundCheckRadius: 0.5
+  moveSpeed: 10
+  jumpForce: 15
+  groundCheck: {fileID: 350642335}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  lastDirection: 0
+  firePoint: {fileID: 1333745142}
+  fireRate: 0.2
+--- !u!114 &1098752167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098752153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28fb9eaad6d3114e8b0075f6c1c34bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  previousState: 0
+  states: []
 --- !u!1 &1333745141
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,29 +1,36 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public abstract class StateMachine : MonoBehaviour
+public  class StateMachine : MonoBehaviour
 {
     [SerializeField]
-    protected PlayerStateID currentState;
+    protected StateID currentState;
     [SerializeField]
-    protected PlayerStateID previousState;
+    protected StateID previousState;
 
-    protected List<PlayerState> states;
-    public static event Action<PlayerStateID> OnStateChange;
+    public List<State> states;
+    public static event Action<StateID> OnStateChange;
 
-    public virtual void Awake()
+    public void Awake()
     {
         InitializeStates();
     }
 
-    public virtual void InitializeStates()
+    public void InitializeStates()
     {
-        //state.Add(new State(StateID.Example);
+        states = GetComponents<State>().ToList();
+        Debug.LogError(states.Count);
+        foreach (var e in states)
+            e.Init(this);
+
+        currentState = StateID.Moving;
+        ChangeState(StateID.Grounded);
     }
 
-    public virtual void Update()
+    public void Update()
     {
         GetState(currentState)?.Tick();
         GetState(currentState)?.CheckConditions();
@@ -34,16 +41,16 @@ public abstract class StateMachine : MonoBehaviour
         GetState(currentState)?.PhysicsTick();
     }
 
-    public void ChangeState(PlayerStateID newState)
+    public void ChangeState(StateID newState)
     {
 
-        if (previousState != PlayerStateID.None && GetState(previousState) != null)
+        if (previousState != StateID.None && GetState(previousState) != null)
             GetState(previousState).OnExitState();
 
         if(currentState != previousState)
             previousState = currentState;
 
-        if (newState != PlayerStateID.None && GetState(newState) != null)
+        if (newState != StateID.None && GetState(newState) != null)
             GetState(newState).OnEnterState();
 
         currentState = newState;
@@ -52,7 +59,7 @@ public abstract class StateMachine : MonoBehaviour
     }
 
 
-    private PlayerState GetState(PlayerStateID stateID)
+    private State GetState(StateID stateID)
     {
         foreach (var state in states)
         {
@@ -63,12 +70,12 @@ public abstract class StateMachine : MonoBehaviour
         return null;
     }
 
-    public PlayerStateID GetCurrentState()
+    public StateID GetCurrentState()
     {
         return currentState;
     }
 
-    public PlayerStateID GetPreviousState()
+    public StateID GetPreviousState()
     {
         return previousState;
     }

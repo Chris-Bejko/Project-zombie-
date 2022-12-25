@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Dead : PlayerState
+public class Dead : State
 {
-    public override void Init(PlayerStateMachine machine)
+    public Player player;
+
+    public override void Init(StateMachine machine)
     {
-        this.Player = machine;
-        stateID = PlayerStateID.Dead;
+        this.stateMachine = machine;
+        stateID = StateID.Dead;
+        
     }
 
 
@@ -26,7 +29,7 @@ public class Dead : PlayerState
     public override void OnEnterState()
     {
         base.OnEnterState();
-        Player.animator.SetTrigger("Die");
+        player.animator.SetTrigger("Die");
     }
 
     public override void OnExitState()

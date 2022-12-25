@@ -2,10 +2,11 @@
 
 public class Grounded : Moving
 {
-    public override void Init(PlayerStateMachine stateMachine)
+    public override void Init(StateMachine stateMachine)
     {
-        this.Player = stateMachine;
-        stateID = PlayerStateID.Grounded;
+        this.stateMachine = stateMachine;
+        stateID = StateID.Grounded;
+
     }
 
     public override void CheckConditions()
@@ -13,16 +14,16 @@ public class Grounded : Moving
         base.CheckConditions();
 
         if (Input.GetKeyDown(KeyCode.Space))
-            Player.ChangeState(PlayerStateID.Jumping);
+            stateMachine.ChangeState(StateID.Jumping);
 
         if (Input.GetMouseButton(0))
-            Player.ChangeState(PlayerStateID.Shooting);
+            stateMachine.ChangeState(StateID.Shooting);
 
-        if (Player.horizontal != 0)
-            Player.ChangeState(PlayerStateID.Moving);
+        if (player.horizontal != 0)
+            stateMachine.ChangeState(StateID.Moving);
 
-        if (!Physics2D.OverlapCircle(Player.groundCheck.position, Player.groundCheckRadius, Player.groundLayer))
-            Player.ChangeState(PlayerStateID.OnAir);
+        if (!Physics2D.OverlapCircle(player.groundCheck.position, player.groundCheckRadius, player.groundLayer))
+            stateMachine.ChangeState(StateID.OnAir);
     }
 
     public override void PhysicsTick()
