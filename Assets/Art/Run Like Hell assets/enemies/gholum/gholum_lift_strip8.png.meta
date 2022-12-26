@@ -140,7 +140,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: gholum_lift_strip8_0
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 9
+        width: 47
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8df83d477c5dc5499e8d56c5521d4fa
+      internalID: 1483495558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_lift_strip8_1
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 7
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c63f71759f4495845ba8fb69fd5e99d5
+      internalID: -938878533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_lift_strip8_2
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 0
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c23a6092ce6354ea3a65916c013b6e
+      internalID: -350619341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_lift_strip8_3
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 9
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48cb019e8a9713548aa72b3985b4ff21
+      internalID: 1920770732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_lift_strip8_4
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 4
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01bc2c5a1e292494d8d76fbe572417ec
+      internalID: 423475397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_lift_strip8_5
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 4
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749c8a7207cce334c8381b3c10e82ab9
+      internalID: -39721338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_lift_strip8_6
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 6
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5447264f9fb6234ea00aebfce0f8437
+      internalID: -1800808148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_lift_strip8_7
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 8
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fb8ad6a6c9e3c340ade1a12bde4ccd3
+      internalID: 1884316169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -151,7 +319,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gholum_lift_strip8_0: 1483495558
+      gholum_lift_strip8_1: -938878533
+      gholum_lift_strip8_5: -39721338
+      gholum_lift_strip8_3: 1920770732
+      gholum_lift_strip8_2: -350619341
+      gholum_lift_strip8_4: 423475397
+      gholum_lift_strip8_7: 1884316169
+      gholum_lift_strip8_6: -1800808148
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

@@ -45,5 +45,8 @@ public enum StateID
     OnAir,
     Dead,
     Chase,
-    Combat
+    Combat,
+    Initiate,
+    AnyState,
+    AnyStateAI
 }

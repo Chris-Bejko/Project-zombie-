@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDamageable
 {
     public float horizontal, vertical;
 
@@ -24,6 +24,16 @@ public class Player : MonoBehaviour
 
     public float fireRate;
 
+    [SerializeField]
+    private int Health;
+    
+    public int maxHealth;
+
+
+    private void Awake()
+    {
+        Health = maxHealth;
+    }
 
     public void Update()
     {
@@ -52,5 +62,15 @@ public class Player : MonoBehaviour
     public int GetPlatform()
     {
         return currentPlatform;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        Health -= damage;
+    }
+
+    public int GetHealth()
+    {
+        return Health;
     }
 }

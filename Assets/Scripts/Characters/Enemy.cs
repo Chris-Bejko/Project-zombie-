@@ -21,10 +21,27 @@ public class Enemy : MonoBehaviour, IDamageable
     private int Health;
 
     public float combatRate;
+
+    public float initiateForce;
+
+    public Transform attackPoint;
+
+    public float attackRange;
+
+    public int damage;
+
+    public int maxHealth;
+
+    public LayerMask PlayerLayer;
+    public void Awake()
+    {
+        Health = maxHealth;
+    }
     public void Update()
     {
         Animate();
     }
+
 
     public void Animate()
     {

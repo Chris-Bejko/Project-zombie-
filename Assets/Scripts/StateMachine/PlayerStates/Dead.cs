@@ -29,9 +29,16 @@ public class Dead : State
     public override void OnEnterState()
     {
         base.OnEnterState();
-        player.animator.SetTrigger("Die");
+        StartCoroutine(Die());
     }
 
+    private IEnumerator Die()
+    {
+        player.animator.SetTrigger("Death");
+        yield return new WaitForSeconds(2f);
+        player.gameObject.SetActive(false);
+
+    }
     public override void OnExitState()
     {
         base.OnExitState();

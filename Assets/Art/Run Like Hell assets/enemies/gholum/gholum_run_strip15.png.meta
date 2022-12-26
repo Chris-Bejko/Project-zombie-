@@ -140,7 +140,322 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: gholum_run_strip15_0
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 6
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 545723b12398d074fb489efc157bd7cd
+      internalID: -2042105895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_run_strip15_1
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 9
+        width: 37
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10249d2025e36344caf35e983f4709f7
+      internalID: -1789316864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_run_strip15_2
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 9
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e117777d3e59646965d3c9f3cbb54e
+      internalID: 322069631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_run_strip15_3
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 5
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8047162a8cdd2419e9a41bcbdeba4b
+      internalID: -321543145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_run_strip15_4
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 6
+        width: 28
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5076ede3e225fbc4681c3d7784304619
+      internalID: -136977623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_run_strip15_5
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 6
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cadb80537f7ea9458d88525f947c0cc
+      internalID: 711078134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_run_strip15_6
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 6
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7e6413b359e574aa18c3fc91fa0bbf
+      internalID: -971073524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_run_strip15_7
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 7
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d19e88a30a66c734da0af4ce19c8060c
+      internalID: 1763518745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_run_strip15_8
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 10
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a92f14fb3c118499b4edea4d91a4d4
+      internalID: -862991146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_run_strip15_9
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 11
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e31822fed09cfb74ba1fd4072a78f7c2
+      internalID: -1060223338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_run_strip15_10
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 6
+        width: 38
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c77258becb87744a6ee6298e05f05a
+      internalID: -1474471789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_run_strip15_11
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 7
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c87d948befa931409d1008ab65769bb
+      internalID: 2038616418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_run_strip15_12
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 7
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2573068daeab605469c204e7eb3dd576
+      internalID: -1545558560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_run_strip15_13
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 7
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c066bc8225b77314dbcff6ca9d7977da
+      internalID: 268632854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_run_strip15_14
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 6
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d548038a174de4499c9332768101495
+      internalID: 679317465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -151,7 +466,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gholum_run_strip15_8: -862991146
+      gholum_run_strip15_14: 679317465
+      gholum_run_strip15_3: -321543145
+      gholum_run_strip15_9: -1060223338
+      gholum_run_strip15_0: -2042105895
+      gholum_run_strip15_2: 322069631
+      gholum_run_strip15_7: 1763518745
+      gholum_run_strip15_5: 711078134
+      gholum_run_strip15_4: -136977623
+      gholum_run_strip15_11: 2038616418
+      gholum_run_strip15_12: -1545558560
+      gholum_run_strip15_13: 268632854
+      gholum_run_strip15_6: -971073524
+      gholum_run_strip15_10: -1474471789
+      gholum_run_strip15_1: -1789316864
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

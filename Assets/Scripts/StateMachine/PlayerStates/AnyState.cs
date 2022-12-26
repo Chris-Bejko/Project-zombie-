@@ -2,23 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Idle : State
+public class AnyState : State
 {
+    public Player player;
 
-    public Enemy enemy;
     public override void Init(StateMachine stateMachine)
     {
         base.Init(stateMachine);
         this.stateMachine = stateMachine;
-        stateID = StateID.Idle;
+        stateID = StateID.AnyState;
     }
 
     public override void CheckConditions()
     {
         base.CheckConditions();
-        if (enemy.Target.GetPlatform() == enemy.Platform)
-            stateMachine.ChangeState(StateID.Initiate);
-
+        if (player.GetHealth() <= 0)
+            stateMachine.ChangeState(StateID.Dead);
     }
-
 }

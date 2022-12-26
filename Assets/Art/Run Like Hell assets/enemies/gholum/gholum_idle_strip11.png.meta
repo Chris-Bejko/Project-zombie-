@@ -140,7 +140,238 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: gholum_idle_strip11_0
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 5
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b796997e368bef44aba130f8bfe81b1a
+      internalID: 1378738277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_idle_strip11_1
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 5
+        width: 29
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b210750d6b15c448ec3adf98f779cf
+      internalID: 807405941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_idle_strip11_2
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 5
+        width: 29
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f149818d08de025429f075702d951222
+      internalID: 2020314739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_idle_strip11_3
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 5
+        width: 29
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd841f1dc775eb43a3cf8be815d231c
+      internalID: 1170332391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_idle_strip11_4
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 5
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5d1ab5c6e781f45a5784c90b0c188f
+      internalID: -874817300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_idle_strip11_5
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 5
+        width: 29
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0b1ef77ced05b4f8eab29cdf1634b8
+      internalID: 1701581893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_idle_strip11_6
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 5
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 570a6bdf7ff766b4392566be7d2ace25
+      internalID: 812676590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_idle_strip11_7
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 5
+        width: 29
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929a9f27229f24d46a97715e32ceea3f
+      internalID: -105886166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_idle_strip11_8
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 5
+        width: 29
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdbf05927a86d1647872bfb86a4de51c
+      internalID: -821357362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_idle_strip11_9
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 5
+        width: 29
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b2b3072d9a79e419a36f6968391a3a
+      internalID: 1993100411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_idle_strip11_10
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 5
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde372a9ae4c2bc4cabb982fa9815c54
+      internalID: 634432672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -151,7 +382,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gholum_idle_strip11_3: 1170332391
+      gholum_idle_strip11_10: 634432672
+      gholum_idle_strip11_1: 807405941
+      gholum_idle_strip11_7: -105886166
+      gholum_idle_strip11_4: -874817300
+      gholum_idle_strip11_9: 1993100411
+      gholum_idle_strip11_8: -821357362
+      gholum_idle_strip11_5: 1701581893
+      gholum_idle_strip11_6: 812676590
+      gholum_idle_strip11_2: 2020314739
+      gholum_idle_strip11_0: 1378738277
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

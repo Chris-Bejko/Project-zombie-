@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 
-public class Moving : State
+public class Moving : AnyState
 {
-    public Player player;
     public override void Init(StateMachine stateMachine)
     {
         this.stateMachine = stateMachine;

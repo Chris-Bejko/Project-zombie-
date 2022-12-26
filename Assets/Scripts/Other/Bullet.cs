@@ -40,7 +40,10 @@ public class Bullet : MonoBehaviour, IDamageable
     {
         if (collision.CompareTag("Player"))
             return;
-
+        if (collision.TryGetComponent<IDamageable>(out var comp))
+        {
+            comp.TakeDamage(10);
+        }
         Die();
     }
 }

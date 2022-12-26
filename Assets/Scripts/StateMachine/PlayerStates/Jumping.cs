@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class Jumping : State
+public class Jumping : AnyState
 {
-    public Player player;
     public override void Init(StateMachine stateMachine)
     {
         this.stateMachine = stateMachine;

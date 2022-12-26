@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class OnAir : State
+public class OnAir : AnyState
 {
-    public Player player;
     public override void Init(StateMachine stateMachine)
     {
         this.stateMachine= stateMachine;

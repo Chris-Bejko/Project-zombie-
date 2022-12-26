@@ -140,7 +140,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: gholum_death_strip10_0
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 5
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c877a2d656f703d4a954090f6cb3d47f
+      internalID: 755109749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_death_strip10_1
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 8
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a706e70f74586e4489db9913ade02caa
+      internalID: 739932047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_death_strip10_2
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 12
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1eeed048a620914db16bbdc43740fda
+      internalID: 139273876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_death_strip10_3
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 14
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e54126d696448488377da5e2cd255f
+      internalID: -677572642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_death_strip10_4
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 16
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4127e71a304577a448aa9574249c5e7a
+      internalID: 2135015697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_death_strip10_5
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 19
+        width: 40
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e06717212124c41b7e3e78e8395fb2
+      internalID: 1104599476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_death_strip10_6
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 20
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78d041631970f24b9452f4d2ca17f09
+      internalID: -1278707715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_death_strip10_7
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 23
+        width: 33
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbff93ab7a61dfc43aa2fac31f9666ec
+      internalID: -1215235702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_death_strip10_10
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 28
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f8b7e1b18f57a94d8fd3ec3d1708917
+      internalID: -1815259859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gholum_death_strip10_8
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 28
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81582a9f304ef1b4dbff0b0b3a4d6d03
+      internalID: -556631431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -151,7 +361,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gholum_death_strip10_11: 1454168012
+      gholum_death_strip10_4: 2135015697
+      gholum_death_strip10_10: -1815259859
+      gholum_death_strip10_3: -677572642
+      gholum_death_strip10_6: -1278707715
+      gholum_death_strip10_7: -1215235702
+      gholum_death_strip10_13: 28755872
+      gholum_death_strip10_0: 755109749
+      gholum_death_strip10_5: 1104599476
+      gholum_death_strip10_14: 1145420440
+      gholum_death_strip10_2: 139273876
+      gholum_death_strip10_8: -556631431
+      gholum_death_strip10_1: 739932047
+      gholum_death_strip10_9: 1719496343
+      gholum_death_strip10_15: -938563544
+      gholum_death_strip10_12: -900614642
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
