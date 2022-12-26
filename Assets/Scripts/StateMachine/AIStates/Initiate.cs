@@ -29,7 +29,7 @@ public class Initiate : AnyStateAI
     {
         var dir = enemy.Target.transform.position - transform.position;
         enemy.rb.AddForce(dir * enemy.initiateForce, ForceMode2D.Impulse);
-        enemy.rb.AddForce(Vector2.up * enemy.initiateForce, ForceMode2D.Impulse);
+        enemy.rb.AddForce(10 * enemy.initiateForce * Vector2.up, ForceMode2D.Force);
         yield return new WaitForSeconds(0.5f);
         stateMachine.ChangeState(StateID.Chase);
     }

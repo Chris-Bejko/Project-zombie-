@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
     public ObjectPool BulletsPool;
 
     public Transform player;
-
+    
+    public Inventory PlayerInventory;
     private void Awake()
     {
         if (Instance == null)

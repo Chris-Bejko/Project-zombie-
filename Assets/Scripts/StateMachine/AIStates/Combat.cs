@@ -36,7 +36,6 @@ public class Combat : AnyStateAI
     private void FCombat()
     {
         var hit = Physics2D.OverlapCircleAll(enemy.attackPoint.position, enemy.attackRange, enemy.PlayerLayer);
-        Debug.LogError(hit.Length);
         foreach (var e in hit)
         {
             if (e.TryGetComponent<IDamageable>(out var damagable))

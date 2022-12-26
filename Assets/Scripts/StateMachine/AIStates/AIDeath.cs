@@ -15,14 +15,13 @@ public class AIDeath : State
     public override void OnEnterState()
     {
         base.OnEnterState();
-        Debug.LogError("Enemy death state entered");
         StartCoroutine(Die());
     }
 
     public IEnumerator Die()
     {
         enemy.animator.SetTrigger(animParam);
-        yield return new WaitForSeconds(0.45f);
+        yield return new WaitForSeconds(0.6f);
         enemy.gameObject.SetActive(false);
     }
 }

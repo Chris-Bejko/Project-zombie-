@@ -22,7 +22,6 @@ public  class StateMachine : MonoBehaviour
     public void InitializeStates()
     {
         states = GetComponents<State>().ToList();
-        Debug.LogError(states.Count);
         foreach (var e in states)
             e.Init(this);
 

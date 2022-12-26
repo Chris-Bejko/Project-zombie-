@@ -6,6 +6,7 @@ public class Player : MonoBehaviour, IDamageable
 {
     public float horizontal, vertical;
 
+    [SerializeField]
     private int currentPlatform;
 
     public Animator animator;

@@ -6,6 +6,7 @@ using UnityEngine;
 public class Dead : State
 {
     public Player player;
+    private const string animParam = "Death";
 
     public override void Init(StateMachine machine)
     {
@@ -34,7 +35,7 @@ public class Dead : State
 
     private IEnumerator Die()
     {
-        player.animator.SetTrigger("Death");
+        player.animator.SetTrigger(animParam);
         yield return new WaitForSeconds(2f);
         player.gameObject.SetActive(false);
 
