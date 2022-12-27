@@ -11,6 +11,9 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(ItemID item)
     {
+        if (HasItem(item))
+            return;
+
         items.Add(item);
         ItemAdded?.Invoke(item);
     }

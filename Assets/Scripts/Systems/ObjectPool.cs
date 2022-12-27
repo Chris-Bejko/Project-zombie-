@@ -13,7 +13,7 @@ public class ObjectPool : MonoBehaviour
     [SerializeField]
     private int amountToPool;
 
-    private void Awake()
+    private void Start()
     {
         for(int i = 0; i < amountToPool; i++)
         {
