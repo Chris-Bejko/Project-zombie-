@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour, IDamageable
@@ -31,6 +29,9 @@ public class Bullet : MonoBehaviour, IDamageable
 
     private void OnEnable()
     {
+        if (GameManager.Instance.GetCurrentState() != GameState.Playing)
+            return;
+
         bulletHealth = 100;
         rb.AddForce(Vector2.right * bulletForce * GameManager.Instance.player.localScale.x, ForceMode2D.Impulse);
         Invoke("Die", 5f);

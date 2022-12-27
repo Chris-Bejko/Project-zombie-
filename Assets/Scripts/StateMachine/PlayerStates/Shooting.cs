@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Shooting : Grounded
 {
     private float timer;
-    private bool shooting;
 
     public override void Init(StateMachine stateMachine)
     {
@@ -15,7 +13,6 @@ public class Shooting : Grounded
     {
         base.Tick();
         timer += Time.deltaTime;
-        shooting = true;
         Shoot();
     }
 
@@ -39,18 +36,6 @@ public class Shooting : Grounded
         if (Input.GetMouseButtonUp(0))
             stateMachine.ChangeState(stateMachine.GetPreviousState());
 
-    }
-
-    public override void OnEnterState()
-    {
-        base.OnEnterState();
-        shooting = true;
-    }
-
-    public override void OnExitState()
-    {
-        base.OnExitState();
-        shooting = false;
     }
 
 }

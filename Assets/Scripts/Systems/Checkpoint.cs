@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
@@ -7,11 +5,17 @@ public class Checkpoint : MonoBehaviour
     [SerializeField]
     CheckpointData checkPointData;
 
+    bool hasAlreadySaved;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Player"))
             return;
 
+        if (hasAlreadySaved)
+            return;
+
+        hasAlreadySaved = true;
         checkPointData.x = transform.position.x;
         checkPointData.y = transform.position.y;
         checkPointData.z = transform.position.z;
