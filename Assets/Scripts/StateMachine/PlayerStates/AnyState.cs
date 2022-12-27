@@ -28,7 +28,7 @@ public class AnyState : State
 
     private void GameStateChanged(GameState state)
     {
-        if (state == GameState.Lore ||state == GameState.Paused || state == GameState.UI)
+        if (state == GameState.Lore || state == GameState.Paused || state == GameState.UI || state == GameState.Cutscene) 
             stateMachine.ChangeState(StateID.Frozen);
 
         if (state == GameState.Playing)

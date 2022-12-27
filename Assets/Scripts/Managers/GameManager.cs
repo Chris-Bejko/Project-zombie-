@@ -114,5 +114,6 @@ public enum GameState
     Playing,
     Paused,
     Loading,
-    Started
+    Started,
+    Cutscene
 }
