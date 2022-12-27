@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 5172776070295707049}
   - component: {fileID: 5172776070295707054}
   - component: {fileID: 5172776070295707055}
+  - component: {fileID: 2236822544909641902}
   m_Layer: 8
   m_Name: Gholum
   m_TagString: Untagged
@@ -42,7 +43,7 @@ Transform:
   m_Children:
   - {fileID: 5172776070523561322}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5172776070295707042
 SpriteRenderer:
@@ -281,6 +282,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0fb5f20d8b83bc45ba6030aa8597bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateID: 0
+  stateMachine: {fileID: 0}
+  enemy: {fileID: 5172776070295707045}
+--- !u!114 &2236822544909641902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5172776070295707043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 292a9aa627bc23c4586f72560515116a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   stateID: 0

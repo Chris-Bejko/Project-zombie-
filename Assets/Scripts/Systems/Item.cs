@@ -18,6 +18,4 @@ public class Item : MonoBehaviour
         gameObject.SetActive(false);    
     }
 
-
-
 }

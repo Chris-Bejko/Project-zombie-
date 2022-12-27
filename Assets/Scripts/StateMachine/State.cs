@@ -48,5 +48,6 @@ public enum StateID
     Combat,
     Initiate,
     AnyState,
-    AnyStateAI
+    AnyStateAI,
+    Frozen
 }

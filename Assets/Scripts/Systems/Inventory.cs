@@ -22,6 +22,16 @@ public class Inventory : MonoBehaviour
     {
         return items.Contains(item);
     }
+
+    public List<ItemID> GetAllItems()
+    {
+        return items;
+    }
+
+    public void SetAllItems(List<ItemID> items)
+    {
+        this.items = items;
+    }
 }
 
 
@@ -32,6 +42,8 @@ public enum ItemID
     Key3, //...
     Key4,
     Key5,
+    EndOfKeys,
+
     Lore1,
     Lore2,
     Lore3,
