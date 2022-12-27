@@ -11,7 +11,6 @@ public class CheckpointController : MonoBehaviour
 
     private void Awake()
     {
-        checkpoints = FindObjectsOfType<Checkpoint>().ToList();
         currentCheckpoint = checkpoints[0];
     }
 
@@ -36,6 +35,7 @@ public class CheckpointController : MonoBehaviour
 [System.Serializable]
 public class CheckpointData
 {
+    public bool hasAlreadyBeenSaved;
     public int index;
     public float x;
     public float y;

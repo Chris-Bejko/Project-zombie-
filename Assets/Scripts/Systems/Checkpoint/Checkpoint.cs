@@ -5,17 +5,16 @@ public class Checkpoint : MonoBehaviour
     [SerializeField]
     CheckpointData checkPointData;
 
-    bool hasAlreadySaved;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Player"))
             return;
 
-        if (hasAlreadySaved)
+        if (checkPointData.hasAlreadyBeenSaved)
             return;
 
-        hasAlreadySaved = true;
+        checkPointData.hasAlreadyBeenSaved = true;
         checkPointData.x = transform.position.x;
         checkPointData.y = transform.position.y;
         checkPointData.z = transform.position.z;
