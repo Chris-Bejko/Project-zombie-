@@ -13,8 +13,21 @@ public class ObjectPool : MonoBehaviour
     [SerializeField]
     private int amountToPool;
 
-    private void Start()
+    private void Awake()
     {
+        GameManager.OnGameStateChanged += Init;
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.OnGameStateChanged -= Init;
+    }
+
+    private void Init(GameState state)
+    {
+        if (state != GameState.Loading)
+            return;
+
         for(int i = 0; i < amountToPool; i++)
         {
             var go = Instantiate(objectToPool, transform);

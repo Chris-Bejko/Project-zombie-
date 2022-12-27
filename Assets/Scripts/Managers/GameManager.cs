@@ -31,11 +31,26 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+    }
+
+    private IEnumerator LoadData()
+    {
+
+        ChangeState(GameState.Loading);
+        while (SaveSystem.Load() == null)
+        {
+            yield return null;
+        }
+        ChangeState(GameState.Started);
+        yield return null;
+        ChangeState(GameState.Playing);
+
     }
 
     private void Start()
     {
-        ChangeState(GameState.Playing);
+        StartCoroutine(LoadData());
     }
     private void Update()
     {
@@ -98,5 +113,7 @@ public enum GameState
     UI,
     Lore,
     Playing,
-    Paused
+    Paused,
+    Loading,
+    Started
 }

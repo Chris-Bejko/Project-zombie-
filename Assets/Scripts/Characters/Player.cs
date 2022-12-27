@@ -31,11 +31,31 @@ public class Player : MonoBehaviour, IDamageable
     public int maxHealth;
 
 
-    private void Awake()
+    private void OnEnable()
     {
-        Health = maxHealth;
+        GameManager.OnGameStateChanged += GameStateChanged;    
     }
 
+    private void OnDisable()
+    {
+        GameManager.OnGameStateChanged -= GameStateChanged;
+    }
+
+    private void Awake()
+    {
+    }
+
+    private void GameStateChanged(GameState state)
+    {
+        if(state == GameState.Started)
+        {
+            Debug.LogError(GameManager.Instance.Checkpoints.GetCheckpoint().GetCheckpointData().index);
+            var checkpoint = GameManager.Instance.Checkpoints.GetCheckpoint().GetCheckpointData();
+            transform.position = new Vector3(checkpoint.x, checkpoint.y, checkpoint.z);
+            Health = checkpoint.PlayerHealth;
+
+        }
+    }
     public void Update()
     {
 

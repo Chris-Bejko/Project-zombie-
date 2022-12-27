@@ -33,6 +33,32 @@ public class Enemy : MonoBehaviour, IDamageable
     public int maxHealth;
 
     public LayerMask PlayerLayer;
+
+    public int nextCheckpoint;
+
+
+    private void OnEnable()
+    {
+        GameManager.OnGameStateChanged += GameStateChanged;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnGameStateChanged -= GameStateChanged;
+    }
+
+
+    private void GameStateChanged(GameState state)
+    {
+        if (state == GameState.Started)
+        {
+            Debug.LogError(GameManager.Instance.Checkpoints.GetCheckpoint().GetCheckpointData().index);
+            if (GameManager.Instance.Checkpoints.GetCheckpoint().GetCheckpointData().index >= nextCheckpoint)
+                gameObject.SetActive(false);
+            else
+                gameObject.SetActive(true);
+        }
+    }
     public void Awake()
     {
         Health = maxHealth;
