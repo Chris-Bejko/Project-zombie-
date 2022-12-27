@@ -11,17 +11,17 @@ public class Checkpoint : MonoBehaviour
         if (!collision.CompareTag("Player"))
             return;
 
-        if (checkPointData.hasAlreadyBeenSaved)
-            return;
+        //if (checkPointData.hasAlreadyBeenSaved)
+          //  return;
 
-        checkPointData.hasAlreadyBeenSaved = true;
+        //checkPointData.hasAlreadyBeenSaved = true;
         checkPointData.x = transform.position.x;
         checkPointData.y = transform.position.y;
         checkPointData.z = transform.position.z;
-        if(checkPointData.index != 0)
-            checkPointData.PlayerHealth = GameManager.Instance.player.GetComponent<Player>().GetHealth();
+        checkPointData.PlayerHealth = GameManager.Instance.player.GetComponent<Player>().GetHealth();
         GameManager.Instance.Checkpoints.SetCheckpoint(checkPointData);
         SaveSystem.Save();
+        gameObject.SetActive(false);
     }
 
     public CheckpointData GetCheckpointData()
