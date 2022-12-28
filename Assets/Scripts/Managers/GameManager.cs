@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
 
     public CheckpointController Checkpoints;
 
+    public UIManager UIManager;
+
     public static event Action<GameState> OnGameStateChanged;
     private void Awake()
     {
@@ -93,12 +95,13 @@ public class GameManager : MonoBehaviour
 
     public void HandleLore()
     {
-        LoreLetter.SetActive(true);
+        UIManager.OpenScreen(UIScreenID.Lore);
+        //LoreLetter.SetActive(true);
     }
 
     public void HandlePlaying()
     {
-        LoreLetter.SetActive(false);
+        UIManager.OpenScreen(UIScreenID.InGame);
     }
 
     public void HandlePaused()
