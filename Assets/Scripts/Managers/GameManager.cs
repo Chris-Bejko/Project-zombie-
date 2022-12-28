@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     public UIManager UIManager;
 
+    public AudioManager AudioManager;
+
     public static event Action<GameState> OnGameStateChanged;
     private void Awake()
     {
