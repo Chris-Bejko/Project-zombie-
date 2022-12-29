@@ -424,7 +424,7 @@ GameObject:
   m_Component:
   - component: {fileID: 149380026}
   - component: {fileID: 149380025}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: elevator_roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -620,7 +620,7 @@ GameObject:
   - component: {fileID: 169872410}
   - component: {fileID: 169872409}
   - component: {fileID: 169872411}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: elevator_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1191,7 +1191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 380923354}
   - component: {fileID: 380923353}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ropes (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2145,7 +2145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 728768116}
   - component: {fileID: 728768117}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ropes (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2401,9 +2401,9 @@ GameObject:
   - component: {fileID: 840669138}
   - component: {fileID: 840669137}
   - component: {fileID: 840669139}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Elevator Group
-  m_TagString: Untagged
+  m_TagString: Elevator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2428,6 +2428,7 @@ Transform:
   - {fileID: 149380026}
   - {fileID: 1392524727}
   - {fileID: 1555794129}
+  - {fileID: 1590223863}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2444,7 +2445,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.3055134, y: -1.5323541}
+  m_Offset: {x: 1.198803, y: -1.5323541}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2455,7 +2456,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8992348, y: 3.0246305}
+  m_Size: {x: 0.5248337, y: 3.0246305}
   m_EdgeRadius: 0
 --- !u!114 &840669136
 MonoBehaviour:
@@ -2471,6 +2472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1392524728}
   keyNeeded: 0
+  inPos: {fileID: 1590223863}
 --- !u!61 &840669137
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3369,7 +3371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1392524727}
   - component: {fileID: 1392524728}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Elevator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3559,7 +3561,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1445759215}
   - component: {fileID: 1445759214}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ropes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3995,7 +3997,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1555794129}
   - component: {fileID: 1555794130}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: elevator_pipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4069,6 +4071,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1590223862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1590223863}
+  m_Layer: 11
+  m_Name: Tra
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1590223863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590223862}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.24, y: -2.16, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 840669134}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1610382276
 GameObject:
   m_ObjectHideFlags: 0
@@ -4922,7 +4955,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1803531181}
   - component: {fileID: 1803531180}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: elevator_doors_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5141,7 +5174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1838586637}
   - component: {fileID: 1838586636}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: elevator_doors_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5496,7 +5529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1943495297}
   - component: {fileID: 1943495296}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ropes (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6170,7 +6203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2093697116}
   - component: {fileID: 2093697117}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ropes (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

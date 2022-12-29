@@ -47,5 +47,6 @@ public enum StateID
     Initiate,
     AnyState,
     AnyStateAI,
-    Frozen
+    Frozen,
+    Elevator
 }

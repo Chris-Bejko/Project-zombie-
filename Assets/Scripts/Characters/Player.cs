@@ -31,7 +31,7 @@ public class Player : MonoBehaviour, IDamageable
 
     private void Awake()
     {
-        GameManager.OnGameStateChanged += GameStateChanged;
+        GameManager.OnGameStateChanged += GameStateChanged;    
         gameObject.SetActive(false);
     }
 
