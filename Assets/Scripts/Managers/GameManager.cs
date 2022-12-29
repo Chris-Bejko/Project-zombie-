@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
 
     private GameState currentState;
 
-    public GameObject LoreLetter;
 
     public CheckpointController Checkpoints;
 
@@ -66,7 +65,6 @@ public class GameManager : MonoBehaviour
     #region GameState
     public void ChangeState(GameState newState)
     {
-        Debug.LogError("State change requested" + newState.ToString());
         currentState = newState;
         switch (newState)
         {

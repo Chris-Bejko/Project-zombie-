@@ -28,16 +28,13 @@ public class UIManager : MonoBehaviour
 
     public void OpenScreen(UIScreenID ID)
     {
-        Debug.LogError("Screen requested + " + ID.ToString());
         var newScreen = UIScreensDict[ID];
         if (newScreen == null)
         {
-            Debug.LogError("There is no UIScreen with ID: " + ID.ToString());
             return;
         }
         UIScreensDict[currentScreen].gameObject.SetActive(false);
         currentScreen = ID;
-        Debug.LogError(UIScreensDict[currentScreen].gameObject.name);
         newScreen.gameObject.SetActive(true);
     }
 

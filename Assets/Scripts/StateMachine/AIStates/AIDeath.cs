@@ -11,6 +11,13 @@ public class AIDeath : State
         this.stateMachine = stateMachine;
         stateID = StateID.Dead;
     }
+
+    public override void CheckConditions()
+    {
+        base.CheckConditions();
+        if (GameManager.Instance.GetCurrentState() == GameState.PlayAgain)
+            stateMachine.ChangeState(StateID.Idle);
+    }
     public override void OnEnterState()
     {
         base.OnEnterState();

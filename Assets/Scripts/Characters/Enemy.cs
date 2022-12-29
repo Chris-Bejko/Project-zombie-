@@ -36,6 +36,8 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public Transform initPoint;
 
+    public float minDistance;
+
     private void OnEnable()
     {
         GameManager.OnGameStateChanged += GameStateChanged;
@@ -51,8 +53,9 @@ public class Enemy : MonoBehaviour, IDamageable
     {
         if (state == GameState.Started)
         {
-            Debug.LogError(GameManager.Instance.Checkpoints.GetCheckpoint().GetCheckpointData().index);
             transform.position = initPoint.position;
+            Debug.LogError("GameStarted, should reset position");
+            Health = maxHealth;
             if (GameManager.Instance.Checkpoints.GetCheckpoint().GetCheckpointData().index >= nextCheckpoint)
                 gameObject.SetActive(false);
             else

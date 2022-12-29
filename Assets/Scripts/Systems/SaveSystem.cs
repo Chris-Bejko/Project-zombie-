@@ -16,7 +16,6 @@ public static class SaveSystem
 
         PlayerPrefs.SetString(kInv, JsonConvert.SerializeObject(inventory));
         PlayerPrefs.SetString(kCheck, JsonConvert.SerializeObject(checkpoint));
-        Debug.LogError("Data Saved");
     }
 
     public static SaveData Load()

@@ -11,7 +11,6 @@ public class ChangeStateButton : MonoBehaviour
     private void OnEnable()
     {
         GetComponent<Button>().onClick.AddListener(() => GameManager.Instance.ChangeState(StateToChangeTo));
-        Debug.LogError("Added Listener");
     }
 
     private void OnDisable()

@@ -1,7 +1,9 @@
+using UnityEngine;
+
 public class Idle : State
 {
-
     public Enemy enemy;
+
     public override void Init(StateMachine stateMachine)
     {
         base.Init(stateMachine);
@@ -12,9 +14,15 @@ public class Idle : State
     public override void CheckConditions()
     {
         base.CheckConditions();
-        if (enemy.Target.GetPlatform() == enemy.Platform)
+        if (Mathf.Abs(enemy.Target.transform.position.x - transform.position.x) <= enemy.minDistance)
             stateMachine.ChangeState(StateID.Initiate);
 
     }
 
+    public override void OnEnterState()
+    {
+        base.OnEnterState();
+        gameObject.SetActive(true);
+
+    }
 }

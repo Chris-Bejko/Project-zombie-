@@ -10,12 +10,12 @@ public class AnyStateAI : State
         this.stateMachine = stateMachine;
         stateID = StateID.AnyStateAI;
     }
-    private void OnEnable()
+    private void Awake()
     {
         GameManager.OnGameStateChanged += GameStateChanged;
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         GameManager.OnGameStateChanged -= GameStateChanged;
     }
@@ -42,7 +42,7 @@ public class AnyStateAI : State
         if (state == GameState.Lore || state == GameState.Paused || state == GameState.UI)
             stateMachine.ChangeState(StateID.Frozen);
 
-        if (state == GameState.Playing)
+        if (state == GameState.Playing || state == GameState.Started)
             stateMachine?.ChangeState(StateID.Idle);
 
     }

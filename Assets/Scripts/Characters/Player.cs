@@ -43,11 +43,9 @@ public class Player : MonoBehaviour, IDamageable
 
     private void GameStateChanged(GameState state)
     {
-        Debug.LogError(state);
         if(state == GameState.Started)
         {
             gameObject.SetActive(true);
-            Debug.LogError(GameManager.Instance.Checkpoints.GetCheckpoint().GetCheckpointData().index);
             var checkpoint = GameManager.Instance.Checkpoints.GetCheckpoint().GetCheckpointData();
             transform.position = new Vector3(checkpoint.x, checkpoint.y, checkpoint.z);
             Health = checkpoint.PlayerHealth;

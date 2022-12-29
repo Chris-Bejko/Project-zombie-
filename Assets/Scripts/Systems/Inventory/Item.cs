@@ -31,7 +31,6 @@ public class Item : MonoBehaviour
     {
         if (state == GameState.Started)
         {
-            Debug.LogError(GameManager.Instance.Checkpoints.GetCheckpoint().GetCheckpointData().index);
             if (GameManager.Instance.Checkpoints.GetCheckpoint().GetCheckpointData().index >= nextCheckpoint)
                 Destroy(gameObject);
         }
