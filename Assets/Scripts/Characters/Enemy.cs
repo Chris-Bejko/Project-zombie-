@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public int nextCheckpoint;
 
+    public Transform initPoint;
 
     private void OnEnable()
     {
@@ -51,6 +52,7 @@ public class Enemy : MonoBehaviour, IDamageable
         if (state == GameState.Started)
         {
             Debug.LogError(GameManager.Instance.Checkpoints.GetCheckpoint().GetCheckpointData().index);
+            transform.position = initPoint.position;
             if (GameManager.Instance.Checkpoints.GetCheckpoint().GetCheckpointData().index >= nextCheckpoint)
                 gameObject.SetActive(false);
             else

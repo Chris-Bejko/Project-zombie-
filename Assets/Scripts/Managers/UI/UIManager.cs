@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     {
         InitDict();
         currentScreen = UIScreenID.Lore;
+        OpenScreen(UIScreenID.MainMenu);
     }
 
     private void InitDict()
@@ -27,6 +28,7 @@ public class UIManager : MonoBehaviour
 
     public void OpenScreen(UIScreenID ID)
     {
+        Debug.LogError("Screen requested + " + ID.ToString());
         var newScreen = UIScreensDict[ID];
         if (newScreen == null)
         {
@@ -34,6 +36,8 @@ public class UIManager : MonoBehaviour
             return;
         }
         UIScreensDict[currentScreen].gameObject.SetActive(false);
+        currentScreen = ID;
+        Debug.LogError(UIScreensDict[currentScreen].gameObject.name);
         newScreen.gameObject.SetActive(true);
     }
 
@@ -49,5 +53,7 @@ public enum UIScreenID
     InGame,
     MainMenu,
     Settings,
+    Lost,
+    Won
 
 }

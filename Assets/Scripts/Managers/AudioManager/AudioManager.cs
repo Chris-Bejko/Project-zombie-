@@ -292,10 +292,6 @@ public class AudioManager : MonoBehaviour
     public enum AudioType
     {
         None,
-        BackgroundMusic,
-        ButtonPressSFX,
-        BatHitSFX,
-        BallCollisionSFX
     }
 
     public enum SourceType

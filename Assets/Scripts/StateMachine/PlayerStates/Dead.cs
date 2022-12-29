@@ -36,6 +36,7 @@ public class Dead : State
         player.animator.SetTrigger(animParam);
         yield return new WaitForSeconds(2f);
         player.gameObject.SetActive(false);
+        GameManager.Instance.ChangeState(GameState.Lost);
 
     }
     public override void OnExitState()

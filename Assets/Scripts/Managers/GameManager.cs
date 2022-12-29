@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    private IEnumerator LoadData()
+    private IEnumerator LoadData(GameState finalState)
     {
 
         ChangeState(GameState.Loading);
@@ -47,13 +47,13 @@ public class GameManager : MonoBehaviour
         }
         ChangeState(GameState.Started);
         yield return null;
-        ChangeState(GameState.Playing);
+        ChangeState(finalState);
 
     }
 
     private void Start()
     {
-        StartCoroutine(LoadData());
+        StartCoroutine(LoadData(GameState.UI));
     }
     private void Update()
     {
@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour
     #region GameState
     public void ChangeState(GameState newState)
     {
+        Debug.LogError("State change requested" + newState.ToString());
         currentState = newState;
         switch (newState)
         {
@@ -81,6 +82,21 @@ public class GameManager : MonoBehaviour
             case GameState.Paused:
                 HandlePaused();
                 break;
+            case GameState.Loading:
+                HandleLoading();
+                break;
+            case GameState.Started:
+                HandleStarted();
+                break;
+            case GameState.Cutscene:
+                HandleCutscene();
+                break;
+            case GameState.Lost:
+                HandleLost();
+                break;
+            case GameState.PlayAgain:
+                HandlePlayAgain();
+                break;
         }
         OnGameStateChanged?.Invoke(currentState);
     }
@@ -89,10 +105,30 @@ public class GameManager : MonoBehaviour
     {
         return currentState;
     }
+    public void HandleLoading()
+    {
+
+    }
+
+    public void HandleStarted()
+    {
+
+    }
+
+    public void HandleCutscene()
+    {
+
+    }
+
+    public void HandleLost()
+    {
+        UIManager.OpenScreen(UIScreenID.Lost);
+        SaveSystem.Save();
+    }
 
     public void HandleUI()
     {
-
+        UIManager.OpenScreen(UIScreenID.MainMenu);
     }
 
     public void HandleLore()
@@ -110,6 +146,11 @@ public class GameManager : MonoBehaviour
     {
 
     }
+
+    public void HandlePlayAgain()
+    {
+        StartCoroutine(LoadData(GameState.Playing));
+    }
     #endregion
 }
 public enum GameState
@@ -120,5 +161,7 @@ public enum GameState
     Paused,
     Loading,
     Started,
-    Cutscene
+    Cutscene,
+    Lost,
+    PlayAgain,
 }
