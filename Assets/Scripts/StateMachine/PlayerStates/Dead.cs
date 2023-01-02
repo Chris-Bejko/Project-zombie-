@@ -28,6 +28,7 @@ public class Dead : State
     public override void OnEnterState()
     {
         base.OnEnterState();
+        player.rb.velocity = Vector2.zero;
         StartCoroutine(Die());
     }
 

@@ -78,7 +78,7 @@ Transform:
   - {fileID: 1934885769063255583}
   - {fileID: 1934885769997962402}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1934885769298295667
 SpriteRenderer:
@@ -190,7 +190,7 @@ MonoBehaviour:
   groundCheck: {fileID: 1934885770546412406}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 4160
   lastDirection: 0
   firePoint: {fileID: 1934885769063255583}
   fireRate: 0.2

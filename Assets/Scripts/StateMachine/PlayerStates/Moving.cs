@@ -2,6 +2,12 @@
 
 public class Moving : AnyState
 {
+    AudioManager.AudioType type;
+
+    public float footstepInterval;
+
+    private float footstepTimer;
+
     public override void Init(StateMachine stateMachine)
     {
         this.stateMachine = stateMachine;
@@ -23,12 +29,23 @@ public class Moving : AnyState
     {
         base.Tick();
         player.lastDirection = player.horizontal;
+
     }
 
     public override void PhysicsTick()
     {
         base.PhysicsTick();
         player.rb.velocity = new Vector2(player.horizontal * player.moveSpeed, player.rb.velocity.y);
+    }
+
+    private void Footsteps()
+    {
+    }
+    public override void OnExitState()
+    {
+        base.OnExitState();
+        //if(type != AudioManager.AudioType.None)
+            //GameManager.Instance.AudioManager.StopAudio(type);
     }
 
 

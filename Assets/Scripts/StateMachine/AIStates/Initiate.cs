@@ -14,6 +14,7 @@ public class Initiate : AnyStateAI
     public override void OnEnterState()
     {
         base.OnEnterState();
+        GameManager.Instance.AudioManager.PlayAudio(AudioManager.AudioType.Initiate);
         //Do initiation
         enemy.animator.SetTrigger(animParam);
         StartCoroutine(InitiateJump());

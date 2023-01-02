@@ -34,7 +34,7 @@ public class Grounded : Moving
     public override void OnEnterState()
     {
         base.OnEnterState();
-        //Machine.rb.velocity = Vector2.zero;
+        player.rb.velocity = Vector2.zero;
     }
 
 }

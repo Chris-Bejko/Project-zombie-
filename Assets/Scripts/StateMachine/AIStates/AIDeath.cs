@@ -22,6 +22,7 @@ public class AIDeath : State
     {
         base.OnEnterState();
         StartCoroutine(Die());
+        GameManager.Instance.AudioManager.PlayAudio(AudioManager.AudioType.Death);
     }
 
     public IEnumerator Die()

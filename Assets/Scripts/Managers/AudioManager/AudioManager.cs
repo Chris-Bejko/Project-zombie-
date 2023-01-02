@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -63,24 +64,33 @@ public class AudioManager : MonoBehaviour
 
     private void InitVolume()
     {
-        if (PlayerPrefs.GetFloat(SourceType.Music.ToString()) != 0)
-        {
-            SetVolume(SourceType.Music, PlayerPrefs.GetFloat(SourceType.Music.ToString()));
-        }
-        SetVolume(SourceType.SFX, PlayerPrefs.GetFloat(SourceType.SFX.ToString()));
+        //if (PlayerPrefs.GetFloat(SourceType.Music.ToString()) != 0)
+        //{
+            //SetVolume(SourceType.Music, PlayerPrefs.GetFloat(SourceType.Music.ToString()));
+       // }
+        //SetVolume(SourceType.SFX, PlayerPrefs.GetFloat(SourceType.SFX.ToString()));
     }
     public void PlayAudio(AudioType _type, bool _fade = false, float _delay = 0.0F)
     {
+        if (_type == AudioType.None)
+            return;
+
         AddJob(new AudioJob(AudioAction.START, _type, _fade, _delay));
     }
 
     public void StopAudio(AudioType _type, bool _fade = false, float _delay = 0.0F)
     {
+        if (_type == AudioType.None)
+            return;
+
         AddJob(new AudioJob(AudioAction.STOP, _type, _fade, _delay));
     }
 
     public void RestartAudio(AudioType _type, bool _fade = false, float _delay = 0.0F)
     {
+        if (_type == AudioType.None)
+            return;
+
         AddJob(new AudioJob(AudioAction.RESTART, _type, _fade, _delay));
     }
 
@@ -157,11 +167,17 @@ public class AudioManager : MonoBehaviour
 
         AudioType _conflictAudio = AudioType.None;
         AudioTrack _audioTrackNeeded = GetAudioTrack(_type, "Get Audio Track Needed");
+        if (_audioTrackNeeded == null)
+            return;
+
         int audioClipsPlaying = 0;
         foreach (DictionaryEntry _entry in _jobTable)
         {
             AudioType _audioType = (AudioType)_entry.Key;
             AudioTrack _audioTrackInUse = GetAudioTrack(_audioType, "Get Audio Track In Use");
+            if (_audioTrackInUse == null)
+                return;
+
             if (_audioTrackInUse.source == _audioTrackNeeded.source)
             {
                 if (audioClipsPlaying == 0)
@@ -181,57 +197,61 @@ public class AudioManager : MonoBehaviour
             yield return _job.delay;
 
         AudioTrack _track = GetAudioTrack(_job.type); // track existence should be verified by now
-        _track.source.clip = GetAudioClipFromAudioTrack(_job.type, _track);
-
-        float _initial = _track.source.volume;
-        float _target = _track.source.volume;
-        switch (_job.action)
+        if (_track != null)
         {
-            case AudioAction.START:
-                _track.source.Play();
-                break;
-            case AudioAction.STOP when !_job.fade:
-                _track.source.Stop();
-                break;
-            case AudioAction.STOP:
-                _initial = _target;
-                _target = 0f;
-                break;
-            case AudioAction.RESTART:
-                _track.source.Stop();
-                _track.source.Play();
-                break;
-        }
 
-        // fade volume
-        if (_job.fade)
-        {
-            float _duration = 1.0f;
-            float _timer = 0.0f;
+            _track.source.clip = GetAudioClipFromAudioTrack(_job.type, _track);
 
-            while (_timer <= _duration)
+            float _initial = _track.source.volume;
+            float _target = _track.source.volume;
+            switch (_job.action)
             {
-                _track.source.volume = Mathf.Lerp(_initial, _target, _timer / _duration);
-                _timer += Time.deltaTime;
+                case AudioAction.START:
+                    _track.source.Play();
+                    break;
+                case AudioAction.STOP when !_job.fade:
+                    _track.source.Stop();
+                    break;
+                case AudioAction.STOP:
+                    _initial = _target;
+                    _target = 0f;
+                    break;
+                case AudioAction.RESTART:
+                    _track.source.Stop();
+                    _track.source.Play();
+                    break;
+            }
+
+            // fade volume
+            if (_job.fade)
+            {
+                float _duration = 1.0f;
+                float _timer = 0.0f;
+
+                while (_timer <= _duration)
+                {
+                    _track.source.volume = Mathf.Lerp(_initial, _target, _timer / _duration);
+                    _timer += Time.deltaTime;
+                    yield return null;
+                }
+
+                // if _timer was 0.9999 and Time.deltaTime was 0.01 we would not have reached the target
+                // make sure the volume is set to the value we want
+                _track.source.volume = _target;
+
+                if (_job.action == AudioAction.STOP)
+                {
+                    _track.source.Stop();
+                }
+            }
+            else
+            {
+                // Yield here so last line doesn't execute until after this function has returned.
                 yield return null;
             }
 
-            // if _timer was 0.9999 and Time.deltaTime was 0.01 we would not have reached the target
-            // make sure the volume is set to the value we want
-            _track.source.volume = _target;
-
-            if (_job.action == AudioAction.STOP)
-            {
-                _track.source.Stop();
-            }
+            _jobTable.Remove(_job.type);
         }
-        else
-        {
-            // Yield here so last line doesn't execute until after this function has returned.
-            yield return null;
-        }
-
-        _jobTable.Remove(_job.type);
     }
 
     private AudioTrack GetAudioTrack(AudioType _type, string _job = "")
@@ -266,6 +286,16 @@ public class AudioManager : MonoBehaviour
         return list;
     }
 
+    public AudioSource GetSource(SourceType type)
+    {
+        foreach(var e in tracks)
+        {
+            if (e.sourceType == type)
+                return e.source;
+        }
+        return null;
+
+    }
     public void SetVolume(SourceType type, float volume)
     {
         foreach (var e in tracks)
@@ -289,15 +319,36 @@ public class AudioManager : MonoBehaviour
         return result;
     }
 
+    internal void PlayAudio(object value)
+    {
+        throw new NotImplementedException();
+    }
+
+    internal AudioSource GetSource(object footsteps)
+    {
+        throw new NotImplementedException();
+    }
+
     public enum AudioType
     {
         None,
+        WoodFootsteps,
+        GravelFootsteps,
+        Initiate,
+        Attack,
+        Death,
+        Ambience,
+        Gun,
+        UIButton
     }
 
     public enum SourceType
     {
         None,
         Music,
-        SFX
+        SFX,
+        Footsteps,
+        Enemy,
+        Player
     }
 }

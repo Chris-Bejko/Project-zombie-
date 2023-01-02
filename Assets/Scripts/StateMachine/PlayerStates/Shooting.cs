@@ -26,6 +26,7 @@ public class Shooting : Grounded
                 return;
             bullet.transform.position = player.firePoint.position;
             bullet.SetActive(true);
+            GameManager.Instance.AudioManager.PlayAudio(AudioManager.AudioType.Gun);
         }
     }
 
@@ -36,6 +37,13 @@ public class Shooting : Grounded
         if (Input.GetMouseButtonUp(0))
             stateMachine.ChangeState(stateMachine.GetPreviousState());
 
+    }
+
+    public override void OnExitState()
+    {
+        base.OnExitState();
+        //if (GameManager.Instance.AudioManager.GetSource(AudioManager.SourceType.Player).isPlaying)
+            //GameManager.Instance.AudioManager.StopAudio(AudioManager.AudioType.Gun);
     }
 
 }

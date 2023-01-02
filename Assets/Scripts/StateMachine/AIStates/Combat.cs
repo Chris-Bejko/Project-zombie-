@@ -20,6 +20,7 @@ public class Combat : AnyStateAI
         if (timer >= enemy.combatRate)
         {
             timer = 0;
+            GameManager.Instance.AudioManager.PlayAudio(AudioManager.AudioType.Attack);
             FCombat();
         }
 

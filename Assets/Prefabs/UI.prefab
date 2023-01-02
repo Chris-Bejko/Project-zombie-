@@ -622,6 +622,7 @@ GameObject:
   - component: {fileID: 4003409922672133889}
   - component: {fileID: 4003409922672133888}
   - component: {fileID: 4003409922672133891}
+  - component: {fileID: 4663621224143199489}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -745,6 +746,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StateToChangeTo: 2
+--- !u!114 &4663621224143199489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4003409922672133894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e0d92fd274acc458baef5ac65329f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clip: 8
 --- !u!1 &4003409922712360506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,6 +1029,7 @@ GameObject:
   - component: {fileID: 4003409922942401116}
   - component: {fileID: 4003409922942401187}
   - component: {fileID: 4003409922942401118}
+  - component: {fileID: 8601430342034006451}
   m_Layer: 5
   m_Name: Play Again (1)
   m_TagString: Untagged
@@ -1138,6 +1153,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenToOpen: 3
+--- !u!114 &8601430342034006451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4003409922942401184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e0d92fd274acc458baef5ac65329f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clip: 8
 --- !u!1 &4003409922954223047
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,6 +1240,7 @@ GameObject:
   - component: {fileID: 4003409922982609693}
   - component: {fileID: 4003409922982609692}
   - component: {fileID: 4003409922982609695}
+  - component: {fileID: 5786917758975183179}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -1335,6 +1364,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenToOpen: 3
+--- !u!114 &5786917758975183179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4003409922982609762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e0d92fd274acc458baef5ac65329f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clip: 8
 --- !u!1 &4003409923023501140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1492,6 +1534,7 @@ GameObject:
   - component: {fileID: 4003409923080744540}
   - component: {fileID: 4003409923080744611}
   - component: {fileID: 4003409923080744542}
+  - component: {fileID: 244844502444967004}
   m_Layer: 5
   m_Name: Play Again
   m_TagString: Untagged
@@ -1615,6 +1658,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StateToChangeTo: 8
+--- !u!114 &244844502444967004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4003409923080744608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e0d92fd274acc458baef5ac65329f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clip: 8
 --- !u!1 &4003409923159558241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1922,7 +1978,7 @@ RectTransform:
   - {fileID: 4003409922954223040}
   - {fileID: 4003409922712360507}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2409,6 +2465,7 @@ GameObject:
   - component: {fileID: 4003409924208983041}
   - component: {fileID: 4003409924208983040}
   - component: {fileID: 4003409924208983043}
+  - component: {fileID: 6934711371492845902}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -2532,6 +2589,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenToOpen: 4
+--- !u!114 &6934711371492845902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4003409924208983046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e0d92fd274acc458baef5ac65329f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clip: 8
 --- !u!1 &4003409924316408940
 GameObject:
   m_ObjectHideFlags: 0

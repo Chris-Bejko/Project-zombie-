@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
 
     public void HandleStarted()
     {
-
+        AudioManager.PlayAudio(AudioManager.AudioType.Ambience);
     }
 
     public void HandleCutscene()
